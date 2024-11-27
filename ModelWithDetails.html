@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Import the component -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+    <style>
+        model-viewer {
+            height: 95vh;
+            width: auto;
+            background-color: gray;
+        }
+       
+        .info-panel {
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        padding: 10px;
+        max-width: 200px;
+        font-size: 14px;
+        line-height: 1.5;
+        text-align: center;
+    }
+
+    .info-panel h3 {
+        margin: 0 0 5px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .info-panel p {
+        margin: 0;
+    }
+
+    </style>
+</head>
+<body>
+  <model-viewer id="hotspot-camera-view-demo" src="./assets/models/jet Engine 01.glb" alt="Thor and the Midgard Serpent" camera-controls enable-pan touch-action="none" camera-orbit="180deg 70.11deg auto" camera-target="1m 1m 1m" field-of-view="45deg" min-field-of-view="45deg" max-field-of-view="45deg" interpolation-decay="200" min-camera-orbit="auto auto 5%" poster="../../assets/SketchfabModels/ThorAndTheMidgardSerpent.webp" ar ar-modes="webxr scene-viewer quick-look">
+
+    <div class="info-panel" id="info-panel" slot="hotspot-1" 
+        data-position="-2m 3.5m 0m" 
+        data-normal="0m 0m 1m" 
+        style="display: none;">
+        <h3>Machine Case</h3>
+        <p>This is the machine case of the air compressor. It houses the internal components, ensuring protection and durability.</p>
+    </div>
+
+    <button class="view-button" slot="hotspot-0" data-position="-1m 3m 0m" data-normal="0m 0m -1m" data-orbit="-3m 3m 0m" data-target="-1.5m 4m 1.5m" style="display: none;" onclick="toggleInfoPanel()">
+        Machine Case
+    </button>   
+
+
+
+
+     <button class="view-button" slot="hotspot-3" data-position="0m 3.25m 1m" data-normal="0m 0m -1m" data-orbit="-2m 4m -3m" data-target="-1m 3m 3m" style="display: none;" onclick="toggleInfoPanel_3()">
+       Rotating Wheels    
+    </button>     
+    <div class="info-panel" id="info-panel_3" slot="hotspot-4" 
+    data-position="0m 3.25m 1m" 
+    data-normal="0m 0m 1m" 
+    style="display: none;">
+    <h3>Rotating Wheels</h3>
+    <p>This is the machine case of the air compressor. It houses the internal components, ensuring protection and durability.</p>
+</div>
+
+
+<button class="view-button" slot="hotspot-2" 
+data-position="0.5m 3m 0m" 
+data-normal="0m 0m -1m" 
+data-orbit="-180.3926deg 90.45934deg 1m"
+data-target="1m 3m -3.5m" style="display: none;" 
+onclick="toggleInfoPanel_2()">
+Pressure Gauge
+</button>
+<div class="info-panel" id="info-panel_2" slot="hotspot-2" 
+data-position="1m 3.5m 0m" 
+data-normal="0m 0m -1m" 
+style="display: none;">
+<h3>Pressure Gauge</h3>
+<p>This is the machine case of the air compressor. It houses the internal components, ensuring protection and durability.</p>
+</div>
+
+
+
+<!-- JET ENgine -->
+
+<button class="view-button" slot="hotspot-6" data-position="6m 3m 0m" data-normal="0m 0m -1m" data-orbit="-220.3926deg 90.45934deg 0.5m" data-target="9m 4m -5.5m"  onclick="toggleInfoPanel_4()">
+  Fan
+</button> 
+<div class="info-panel" id="info-panel_4"  slot="hotspot-66" 
+data-position="6m 2m 0m" 
+data-normal="0m 0m -1m" 
+style="display: none;">
+<h3>Fan</h3>
+<p>Fans at the front of the engine draw in air and allow it to easily enter the engine.</p>
+</div>
+
+
+<button class="view-button" slot="hotspot-7" data-position="-2m 3m 0m" data-normal="0m 0m -1m" data-orbit="-160.3926deg 90.45934deg 0.5m" data-target="-3m 4m -4m"  onclick="toggleInfoPanel_5()">
+  Low Pressure Turbine
+</button> 
+<div class="info-panel" id="info-panel_5"  slot="hotspot-77" 
+data-position="0m 3m 1m" 
+data-normal="0m 0m -1m" 
+style="display: none;">
+<h3>Low Pressure Turbine</h3>
+<p>The stabilizer blades, placed between the YBT and the DBT, change the angle at which the air strikes the blades of the DBT.
+  That's why their DBTs rotate in the opposite direction of their MP. This process increases the overall efficiency of the turbine.</p>
+</div>
+
+
+
+
+<button class="view-button" slot="hotspot-8" data-position="1.1m 4m 0m" data-normal="0m 0m -1m" data-orbit="-160.3926deg 90.45934deg 0.5m" data-target="0m 4m -4m"  onclick="toggleInfoPanel_6()">
+  Combustion Chamber
+</button> 
+<div class="info-panel" id="info-panel_6"  slot="hotspot-88" 
+data-position="0m 3m 1m" 
+data-normal="0m 0m -1m" 
+style="display: none;">
+<h3>Combustion Chamber</h3>
+<p>The stabilizer blades, placed between the YBT and the DBT, change the angle at which the air strikes the blades of the DBT.
+  That's why their DBTs rotate in the opposite direction of their MP. This process increases the overall efficiency of the turbine.</p>
+</div>
+
+
+<!-- MOTOR ENgine -->
+
+<!-- <button class="view-button" slot="hotspot-9" data-position="0m 1m 0m" data-normal="0m 0m -1m" data-orbit="-160.3926deg 90.45934deg 0.5m" data-target="0m 1m -1m"  onclick="toggleInfoPanel_7()">
+  Fuel Tank
+</button> 
+<div class="info-panel" id="info-panel_7"  slot="hotspot-99" 
+data-position="0m 1.5m 1m" 
+data-normal="0m 0m -1m" 
+style="display: none;">
+<h3>Fuel Tank</h3>
+<p>The stabilizer blades, placed between the YBT and the DBT, change the angle at which the air strikes the blades of the DBT.
+  That's why their DBTs rotate in the opposite direction of their MP. This process increases the overall efficiency of the turbine.</p>
+</div>
+
+<button class="view-button" slot="hotspot-10" data-position="0m 0.5m 0m" data-normal="0m 0m -1m" data-orbit="-220.3926deg 80.45934deg 0.5m" data-target="2m 1m -1m"  onclick="toggleInfoPanel_8()">
+  Engine
+</button> 
+<div class="info-panel" id="info-panel_8"  slot="hotspot-100" 
+data-position="0m 0m 1m" 
+data-normal="0m 0m -1m" 
+style="display: none;">
+<h3>Engine</h3>
+<p>The stabilizer blades, placed between the YBT and the DBT, change the angle at which the air strikes the blades of the DBT.
+  That's why their DBTs rotate in the opposite direction of their MP. This process increases the overall efficiency of the turbine.</p>
+</div>
+
+
+<button class="view-button" slot="hotspot-11" data-position="-0.6m 0.1m 0m" data-normal="0m 0m -1m" data-orbit="-210.3926deg 80.45934deg 0.5m" data-target="1m 1m -1m"  onclick="toggleInfoPanel_9()">
+  Exhaust Pipe
+</button> 
+<div class="info-panel" id="info-panel_9"  slot="hotspot-111" 
+data-position="-1m 0.4m 0m" 
+data-normal="0m 0m -1m" 
+style="display: none;">
+<h3>Exhaust Pipe</h3>
+<p>The stabilizer blades, placed between the YBT and the DBT, change the angle at which the air strikes the blades of the DBT.
+  That's why their DBTs rotate in the opposite direction of their MP. This process increases the overall efficiency of the turbine.</p>
+</div> -->
+
+
+    <div id="controls" class="dim">
+        <label for="src">Product:</label>
+        <select id="src">
+          <option value="./assets/models/Tester_Case.glb">Tester Case</option>
+        </select><br>
+
+        <form action="index.html">
+            <input type="submit" value="Home" />
+        </form>
+        <form action="ModelWithDetails.html">
+            <input type="submit" value="Model With Details" />
+        </form>
+        <form action="ModelWithSize.html">
+            <input type="submit" value="Model With Size" />
+        </form>
+         
+
+      </div>
+     
+    <!--   
+    <button class="view-button" slot="hotspot-2" data-position="0.0608m 0.0566m 0.0605m" data-normal="0.2040984m 0.7985359m -0.56629m" data-orbit="42.72974deg 84.74043deg 0.07104211m" data-target="0.0757959m 0.04128428m 0.07109568m">
+      Wet 4.5 V, Accuracy 1 mV - Wet 30 V, Accuracy 3 mV - Wet 188 V, Accuracy 10 mV - Wet 188 V, Disable Error
+    </button>      
+    <button class="view-button" slot="hotspot-3" data-position="0.1989m 0.16711m -0.0749m" data-normal="0.7045857m 0.1997957m -0.6809117m" data-orbit="-40.11996deg 88.17818deg 0.07090651m" data-target="0.2011831m 0.1398312m -0.07917573m">
+      500 mA AC - 700 mA DC - Accuracy 50 ... - 200 mV Accuracy 50 ...
+    </button>      -->
+  </model-viewer>
+
+  <script>
+    // Select the model-viewer and info box
+    const modelViewer = document.querySelector('#hotspot-camera-view-demo');
+    const infoBox = document.getElementById('info-box');
+    const infoText = document.getElementById('info-text');
+
+    // Select the hotspot button
+    const hotspotButton = document.querySelector('[slot="hotspot-0"]');
+
+    // Add click event listener to the hotspot button
+    hotspotButton.addEventListener('click', function() {
+        // Change the content inside the info box
+        infoText.textContent = "The 'Machine Case' is the main housing for the compressor components. It ensures protection and safe operation of the machinery.";
+
+        // Show the info box
+        infoBox.classList.add('visible');
+    });
+
+    // Optionally, you can add an event to hide the info box if clicked outside
+    window.addEventListener('click', function(event) {
+        if (!event.target.closest('model-viewer') && !event.target.closest('#info-box')) {
+            infoBox.classList.remove('visible');
+        }
+    });
+
+    function toggleInfoPanel() {
+        const infoPanel = document.getElementById('info-panel');
+        const infoPanel2 = document.getElementById('info-panel_2');
+        const infoPanel3 = document.getElementById('info-panel_3');
+        infoPanel.style.display = infoPanel.style.display === 'none' ? 'block' : 'none';
+        infoPanel2.style.display='none';
+        infoPanel3.style.display='none';
+
+    }
+    function toggleInfoPanel_2() {
+      const infoPanel3 = document.getElementById('info-panel_3');
+      const infoPanel1 = document.getElementById('info-panel');
+        const infoPanel = document.getElementById('info-panel_2');
+        infoPanel.style.display = infoPanel.style.display === 'none' ? 'block' : 'none';
+        infoPanel1.style.display='none';
+        infoPanel3.style.display='none';
+    }
+    function toggleInfoPanel_3() {
+      const infoPanel2 = document.getElementById('info-panel_2');
+      const infoPanel1 = document.getElementById('info-panel');
+        const infoPanel = document.getElementById('info-panel_3');
+        infoPanel.style.display = infoPanel.style.display === 'none' ? 'block' : 'none';
+        infoPanel1.style.display='none';
+        infoPanel2.style.display='none';
+    }
+
+    function toggleInfoPanel_4() {
+      const infoPanel2 = document.getElementById('info-panel_6');
+      const infoPanel1 = document.getElementById('info-panel_5');
+        const infoPanel = document.getElementById('info-panel_4');
+        infoPanel.style.display = infoPanel.style.display === 'none' ? 'block' : 'none';
+        infoPanel1.style.display='none';
+        infoPanel2.style.display='none';
+    }
+    function toggleInfoPanel_5() {
+      const infoPanel2 = document.getElementById('info-panel_6');
+      const infoPanel1 = document.getElementById('info-panel_4');
+        const infoPanel = document.getElementById('info-panel_5');
+        infoPanel.style.display = infoPanel.style.display === 'none' ? 'block' : 'none';
+        infoPanel1.style.display='none';
+        infoPanel2.style.display='none';
+    }
+   
+    function toggleInfoPanel_6() {
+      const infoPanel2 = document.getElementById('info-panel_5');
+      const infoPanel1 = document.getElementById('info-panel_4');
+        const infoPanel = document.getElementById('info-panel_6');
+        infoPanel.style.display = infoPanel.style.display === 'none' ? 'block' : 'none';
+        infoPanel1.style.display='none';
+        infoPanel2.style.display='none';
+    }
+
+    function toggleInfoPanel_7() {
+      const infoPanel2 = document.getElementById('info-panel_9');
+      const infoPanel1 = document.getElementById('info-panel_8');
+        const infoPanel = document.getElementById('info-panel_7');
+        infoPanel.style.display = infoPanel.style.display === 'none' ? 'block' : 'none';
+        infoPanel1.style.display='none';
+        infoPanel2.style.display='none';
+    }
+    function toggleInfoPanel_8() {
+      const infoPanel2 = document.getElementById('info-panel_9');
+      const infoPanel1 = document.getElementById('info-panel_7');
+        const infoPanel = document.getElementById('info-panel_8');
+        infoPanel.style.display = infoPanel.style.display === 'none' ? 'block' : 'none';
+        infoPanel1.style.display='none';
+        infoPanel2.style.display='none';
+    }
+    function toggleInfoPanel_9() {
+      const infoPanel2 = document.getElementById('info-panel_7');
+      const infoPanel1 = document.getElementById('info-panel_8');
+        const infoPanel = document.getElementById('info-panel_9');
+        infoPanel.style.display = infoPanel.style.display === 'none' ? 'block' : 'none';
+        infoPanel1.style.display='none';
+        infoPanel2.style.display='none';
+    }
+    
+</script>
+
+  <script type="module">
+    const modelViewer1 = document.querySelector("#hotspot-camera-view-demo");
+    const annotationClicked = (annotation) => {
+      let dataset = annotation.dataset;
+      modelViewer1.cameraTarget = dataset.target;
+      modelViewer1.cameraOrbit = dataset.orbit;
+    }
+  
+    modelViewer1.querySelectorAll('button').forEach((hotspot) => {
+      console.log("hello hotspot", hotspot);
+      hotspot.addEventListener('click', () => annotationClicked(hotspot));
+    });
+    
+  </script>
+  
+
+  <style type="text/css">
+
+
+    #controls {
+        position: absolute;
+        bottom: 16px;
+        left: 16px;
+        max-width: unset;
+        transform: unset;
+      }
+    
+      .dot{
+        display: block;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+        background: #fff;
+        --min-hotspot-opacity: 0;
+      }
+    
+      .dim{
+        background: #fff;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+        color: rgba(0, 0, 0, 0.8);
+        display: block;
+        font-family: Futura, Helvetica Neue, sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        max-width: 128px;
+        overflow-wrap: break-word;
+        padding: 0.5em 1em;
+        position: absolute;
+        width: max-content;
+        height: max-content;
+        transform: translate3d(-50%, -50%, 0);
+        --min-hotspot-opacity: 0;
+      }
+    
+      .show{
+        --min-hotspot-opacity: 1;
+      }
+    
+      .hide{
+        display: none;
+      }
+      /* This keeps child nodes hidden while the element loads */
+      :not(:defined) > * {
+        display: none;
+      }
+
+    .view-button {
+        background: #fff;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+        color: rgba(0, 0, 0, 0.8);
+        display: block;
+        font-family: Futura, Helvetica Neue, sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        max-width: 128px;
+        overflow-wrap: break-word;
+        padding: 0.5em 1em;
+        position: absolute;
+        width: max-content;
+        height: max-content;
+        transform: translate3d(-50%, -50%, 0);
+      }
+  </style>
+  
+
+
+</body>
+</html>
+
